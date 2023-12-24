@@ -1,0 +1,130 @@
+# Exploratory-Analysis-Of-Geolocational-Data
+This project involves the use of K-Means Clustering to find the best accommodation for immigrants in  any city of their choice by classifying accommodation for incoming immigrants on the basis of their preferences on amenities, budget and proximity to selected locations.
+
+# The project consists of the following stages:
+Fetch Datasets from kaggle
+Clean the Datasets to prepare them for analysis. (Data Cleaning using Pandas)
+Visualise the data using boxplots. (Using Matplotlib /Seaborn /Pandas)
+Fetch Geolocational Data from the Foursquare API. (REST APIs)
+Use K-Means Clustering to cluster the locations (Using ScikitLearn)
+Present output on a map. (Using Folium)
+
+# Result after implementation
+<img width="959" alt="Screenshot 2022-07-15 160502" src="/K-MEANS CLUSTERING/map-result.png">
+
+
+Using the first 5 and last 5 data of each clusters,
+
+
+cluster 0 green;
+churches >= mosques >= restaurants >= markets >= gyms
+churches >= mosques >= restaurants >= gyms >= markets
+churches >= markets >= mosques >= restaurants >= gyms
+churches >= mosques >= restaurants >= markets >= gyms
+churches >= markets >= gyms >= restaurants >= mosques
+churches >= mosques >= restaurants >= gyms >= markets
+churches >= restaurants >= mosques >= markets >= gyms
+churches >= mosques >= markets >= restaurants >= gyms
+churches >= mosques >= markets >= restaurants >= gyms
+churches >= restaurants >= gyms >= mosques >= markets
+
+observation;
+churches > mosques 100%
+restaurants > gyms 90%
+mosques > markets 80%
+
+average accuracy: 90%
+
+> markets > restaurants > gyms
+
+cluster 1 orange;
+markets >= churches >= restaurants >= gyms >= mosques
+markets >= churches >= restaurants >= gyms >= mosques
+markets >= churches >= restaurants >= gyms >= mosques
+markets >= churches >= mosques >= gyms >= restaurants
+markets >= churches >= gyms >= restaurants >= mosques
+markets >= churches >= mosques >= gyms >= restaurants
+markets >= churches >= restaurants >= gyms >= mosques
+markets >= churches >= mosques >= restaurants >= gyms
+markets >= churches >= mosques >= restaurants >= gyms
+markets >= churches >= mosques >= restaurants >= gyms
+
+observation;
+markets > churches > mosques 100%,
+churches > restaurants 100%
+restaurants > gyms 70%
+
+average accuracy: 90%
+
+cluster 2 blue;
+markets >= churches >= mosques >= gyms >= restaurants
+markets >= churches >= mosques >= gyms >= restaurants
+markets >= churches >= gyms >= mosques >= restaurants
+churches >= markets >= mosques >= restaurants >= gyms
+markets >= churches >= restaurants >= gyms >= mosques
+markets >= churches >= mosques >= gyms >= restaurants
+markets >= churches >= mosques >= gyms >= restaurants
+churches >= markets >= mosques >= restaurants >= gyms
+markets >= churches >= mosques >= restaurants >= gyms
+markets >= churches >= mosques >= restaurants >= gyms
+
+observation;
+markets > mosques > restaurants 90%,
+markets > mosques > gyms 80%
+churches > mosques 100%
+
+average accuracy  90%
+
+
+cluster 3 yellow;
+mosques >= markets >= churches >= gyms >= restaurants
+markets >= mosques >= churches >= gyms >= restaurants
+churches >= gyms >= mosques >= markets >= restaurants
+mosques >= markets >= churches >= reataurants >= gyms
+churches >= gyms >= restaurants >= markets >= mosques
+churches >= mosques >= restaurants >= gyms >= markets
+markets >= churches >= gyms >= mosques >= restaurants
+markets >= mosques >= restaurants >= churches >= gyms
+mosques >= markets >= restaurants >= churches >= gyms
+mosques >= markets >= churches >= gyms >= restaurants
+
+observation; 
+markets > restaurants 80%
+churches > restaurants 80%
+churches > gyms 100%
+mosques > restaurants 90%
+average accuracy: 87.5%
+
+
+
+cluster 4 red;
+markets >= mosques >= restaurants >= gyms >= churches
+markets >= mosques >= restaurants >= churches >= gyms
+markets >= mosques >= restaurants >= churches >= gyms
+markets >= mosques >= churches >= restaurants >= gyms
+markets >= mosques >= churches >= restaurants >= gyms
+markets >= mosques >= restaurants >= gyms >= churches
+markets >= mosques >= restaurants >= gyms >= churches
+markets >= mosques >= restaurants >= gyms >= churches
+markets >= mosques >= restaurants >= gyms >= churches
+markets >= mosques >= churches >= gyms >= restaurants
+
+observation;
+markets > mosques > churches 100%
+restaurants > gyms 90%
+
+average accuracy 95%
+
+
+
+conclusion:
+
+overall average accuracy 90.5%
+
+cluster with the most markets 1 and 4
+clusters with the most churches 0
+clusters with the most mosques 3 and 4
+clusters with the most restaurants 4
+clusters with the most gyms 2 and 3
+
+
