@@ -1,5 +1,5 @@
 # Exploratory-Analysis-Of-Geolocational-Data
-This project involves the use of K-Means Clustering to find the best accommodation for immigrants in  any city of their choice by classifying accommodation for incoming immigrants on the basis of their preferences on amenities, budget and proximity to selected locations.
+This project involves the use of K-Means Clustering to find the best accommodation for immigrants in  Lagos state Nigeria by classifying accommodation for incoming immigrants on the basis of their preferences on amenities, budget and proximity to selected locations.
 
 # The project consists of the following stages:
 Fetch Datasets from kaggle
